@@ -50,3 +50,13 @@ The framework is designed around two core pillars:
 
 * **⚡ Fast to Run:** It offers performance on par with **NodeJS** and **Go**, thanks to its asynchronous capabilities and Starlette integration.
 * **✍️ Fast to Code:** It reduces developer error and increases speed by using type hints for automatic validation, documentation (Swagger), and editor support (auto-completion).
+
+Exacty why the fast API is fast to run - 
+Lets say we are making a API for a ML model.
+Lets say we set an endpoint /predict in this API.
+The endoint take 2 inputs f1 and f2, then gives prediction p.
+Then we deployed the API on AWS.(API code and Web server on AWS)
+
+Client --> HTTP request --> Web Server --> SGI --> API Code 
+
+Web server sends the HTTP request to our API  
