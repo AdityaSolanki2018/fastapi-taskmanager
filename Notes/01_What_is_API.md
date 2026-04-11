@@ -51,7 +51,7 @@ The framework is designed around two core pillars:
 * **⚡ Fast to Run:** It offers performance on par with **NodeJS** and **Go**, thanks to its asynchronous capabilities and Starlette integration.
 * **✍️ Fast to Code:** It reduces developer error and increases speed by using type hints for automatic validation, documentation (Swagger), and editor support (auto-completion).
 
-Exacty why the fast API is fast to run - 
+# Exacty why the fast API is fast to run - 
 Lets say we are making a API for a ML model.
 Lets say we set an endpoint /predict in this API.
 The endoint take 2 inputs f1 and f2, then gives prediction p.
@@ -60,3 +60,46 @@ Then we deployed the API on AWS.(API code and Web server on AWS)
 Client --> HTTP request --> Web Server --> SGI --> API Code 
 
 Web server sends the HTTP request to our API  
+Requset is an HTTP requset which python cannot understand. To convert HTTP requst to pyhton understandable format there is SGI
+SGI establishes a 2 way communivation between the web setver and the API
+Now python code take the feature values and generates a prediction
+SGI converts the python output to a HTTP response
+
+How flask uses this flow
+![alt text](image-3.png)
+SGI is a protocal and to implement this protocaol we need a library
+Flask uses Werkzeug library for imoplementing SGI protocaols
+Flask uses Gunicorn as Server
+In Flask the endpoint(API) is also synchronous.
+SGI we use is WSGI (Web Server Gateway Interface)
+disadvantage of wsgi is that it is synchronous in nature -> one user at a time and there is a blocking nature.
+
+How FastAPI uses this flow
+In FastAPI the SGI we are using is ASGI
+Implemented using the Starlette library
+![alt text](image-4.png)
+Fast API uses Uvicorn as python web server
+Fast API supports async and await features of python 
+
+# Why FastAPI is fast to code?
+1. Automatic input Validation
+2. Auto-Generated Interactive Documentation
+3. Seamless Integration with Modern Ecosystem(ML/DL libraries, OAuth, JWT, SQL Alchemy, Doc ker, Kubernetes)
+
+Steps to get stared:-
+1. Create a python virtual environment(Why?)
+pyhton -m venv myenv
+
+2. Activate out virtual envitonment
+myenv\Scripts\activate
+use command if running scripts is disabled
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+3. Install Libraries
+pip install fastapi uvicorn pydantic
+
+4. To run our app
+uvicorn app.main:app --reload
+
+if main is outside app folder
+uvicorn main:app --reload
