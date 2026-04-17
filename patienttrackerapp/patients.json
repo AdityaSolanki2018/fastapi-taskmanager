@@ -1,0 +1,35 @@
+{"P001": {
+    "name": "John Doe",
+    "age": 30,
+    "gender": "Male",
+    "city": "New York",
+    "diagnosis": "Flu"
+},
+"P002": {
+    "name": "Jane Smith",
+    "age": 25,
+    "gender": "Female",
+    "city": "Los Angeles",
+    "diagnosis": "Headache"
+},
+"P003": {
+    "name": "Emily Davis",
+    "age": 40,
+    "gender": "Female",
+    "city": "Chicago",
+    "diagnosis": "Migraine"
+},
+"P004": {   
+    "name": "Michael Brown",
+    "age": 35,
+    "gender": "Male",
+    "city": "Houston", 
+    "diagnosis": "Back Pain"
+},
+"P005": {
+    "name": "Sarah Wilson",
+    "age": 28,
+    "gender": "Female",
+    "city": "Phoenix",
+    "diagnosis": "Anxiety"
+}}
