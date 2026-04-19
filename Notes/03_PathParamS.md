@@ -9,4 +9,8 @@ retrieve
 update
 delete
 
+The Path() function in FastAPI is used to provide metadata, validation rules, and documentation hints for path parameters in your API enodpoints.
+
+Title, Description, Example, ge, gt, le, lt, Min_length, Max_length, regex
+
 
