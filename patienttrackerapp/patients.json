@@ -3,33 +3,44 @@
     "age": 30,
     "gender": "Male",
     "city": "New York",
-    "diagnosis": "Flu"
+    "diagnosis": "Flu",
+    "height": 180,
+    "weight": 75
 },
 "P002": {
     "name": "Jane Smith",
     "age": 25,
     "gender": "Female",
     "city": "Los Angeles",
-    "diagnosis": "Headache"
+    "diagnosis": "Headache",
+    "height": 165,
+    "weight": 60
+
 },
 "P003": {
     "name": "Emily Davis",
     "age": 40,
     "gender": "Female",
     "city": "Chicago",
-    "diagnosis": "Migraine"
+    "diagnosis": "Migraine",
+    "height": 170,
+    "weight": 65
 },
 "P004": {   
     "name": "Michael Brown",
     "age": 35,
     "gender": "Male",
     "city": "Houston", 
-    "diagnosis": "Back Pain"
+    "diagnosis": "Back Pain",
+    "height": 175,
+    "weight": 80
 },
 "P005": {
     "name": "Sarah Wilson",
     "age": 28,
     "gender": "Female",
     "city": "Phoenix",
-    "diagnosis": "Anxiety"
+    "diagnosis": "Anxiety",
+    "height": 160,
+    "weight": 55
 }}
