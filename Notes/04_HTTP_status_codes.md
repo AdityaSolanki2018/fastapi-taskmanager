@@ -18,3 +18,11 @@ They help the client (browser, frontend, mobile app, etc) understand:
 204 No Content - Success but no data returned (After Create request)
 
 400 Bad Request - Misformed or invalid request (Missind field or wrong data type)
+
+## HTTP Exception
+A special built in exception in FasrAPI used to return custom HTTP error responses wehn something goes weong in your API.
+
+Insread of retuting a normal JSON or crashing the server, you can gracefully raise an error with: 
+A proper HTTP status code (like 404. 400,403 etc)
+a custom error message
+extra headers(optional)

@@ -26,7 +26,8 @@ def view_patient(patient_id:str = Path(..., description='ID of Patient', example
     data = load_data()
     if patient_id in data:
         return data[patient_id]
-    # return {'error':'patient not found'}
+    # return {'error':'patient not found'}   # Displays error code 200 instead of 404
+    
     raise HTTPException(status_code=404,detail='Patient Not Found')
 
 
